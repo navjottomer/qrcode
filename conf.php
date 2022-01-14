@@ -19,14 +19,6 @@
      * License along with this program.  If not, see <http://www.gnu.org/licenses/>.
      */
 
-    if(Params::getParam('action')=='qrcode-save-settings') {
-        osc_set_preference('upload_path', Params::getParam('upload_path'), 'qrcode', 'STRING');
-        osc_set_preference('upload_url', Params::getParam('upload_url'), 'qrcode', 'STRING');
-        osc_set_preference('code_size', Params::getParam('code_size'), 'qrcode', 'INTEGER');
-        osc_reset_preferences();
-        osc_add_flash_ok_message('QR Code settings updated correctly', 'admin');
-        osc_redirect_to(osc_route_admin_url('qrcode-conf'));
-    }
 ?>
 <div id="settings_form" style="border: 1px solid #ccc; background: #eee; ">
     <div style="padding: 20px;">
